@@ -1,6 +1,6 @@
-**Tugas 2 – Akuisisi dan Manajemen Data
+TUGAS 2 – AKUISISI DAN MANAJEMEN DATA
 
-Akuisisi Data Tempat Wisata di Provinsi Bali Menggunakan OpenStreetMap**
+AKUISISI DATA TEMPAT WISATA DI PROVINSI BALI MENGGUNAKAN OPENSTREETMAP
 
 
 Mata Kuliah: Akuisisi dan Manajemen Data
@@ -15,6 +15,6 @@ Semester/Kelas: 3 / F
 
 Dosen Pengampu: Dr. I Gede Totok Suryawan, S.Kom., M.T.
 
-Nama Mahasiswa: Maria Indriani Lelu
+Nama : Maria Indriani Lelu
 
 NIM: 2501010335
