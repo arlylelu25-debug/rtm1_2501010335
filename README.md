@@ -1,6 +1,6 @@
-Tugas 2 – Akuisisi dan Manajemen Data
+**Tugas 2 – Akuisisi dan Manajemen Data
 
-Akuisisi Data Tempat Wisata di Provinsi Bali Menggunakan OpenStreetMap
+Akuisisi Data Tempat Wisata di Provinsi Bali Menggunakan OpenStreetMap**
 
 
 Mata Kuliah: Akuisisi dan Manajemen Data
