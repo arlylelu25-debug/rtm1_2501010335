@@ -4,6 +4,8 @@ AKUISISI DATA TEMPAT WISATA DI PROVINSI BALI MENGGUNAKAN OPENSTREETMAP
 
 
 
+
+
 Mata Kuliah: Akuisisi dan Manajemen Data
 
 Kode Mata Kuliah: BIFP-243
