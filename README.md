@@ -1,11 +1,18 @@
 # AKUISISI DATA TEMPAT WISATA DI PROVINSI BALI MENGGUNAKAN OPENSTREETMAP
 
 Nama: Maria Indriani Lelu
+
 NIM: 2501010335
-Mata Kuliah: Akuisisi dan Manajemen Data - BIFP-243
+
+Mata Kuliah: Akuisisi dan Manajemen 
+Data - BIFP-243
+
 Program Studi: Informatika - INSTIKI
+
 Semester / Kelas: 3 / F
+
 Dosen Pengampu: Dr. I Gede Totok Suryawan, S.Kom., M.T.
+
 
 ## Tujuan
 Mengumpulkan data tempat wisata di Provinsi Bali sebagai bahan analisis pariwisata, dan sebagai dataset mentah untuk RTM Tugas 2. Data tempat wisata dipilih karena Bali memiliki sebaran atraksi yang luas di sembilan kabupaten/kota, dan datanya tersedia terbuka di OpenStreetMap.
