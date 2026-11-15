@@ -1,0 +1,8 @@
+{
+  "nama_berkas": "data/raw/openstreetmap_bali_20261115.csv",
+  "jumlah_record": 713,
+  "sumber": "OpenStreetMap via Overpass API",
+  "lisensi": "ODbL",
+  "atribusi": "© OpenStreetMap contributors",
+  "hash_md5": "72d502e47e3fb293ead2d592b1e7e62d"
+}
