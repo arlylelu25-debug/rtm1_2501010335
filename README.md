@@ -7,7 +7,7 @@ NIM: 2501010335
 Mata Kuliah: Akuisisi dan Manajemen 
 Data - BIFP-243
 
-Program Studi: Informatika - MDA
+Program Studi: Teknik Informatika - MDA
 
 Semester / Kelas: 3 / F
 
