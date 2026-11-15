@@ -1,88 +1,50 @@
 # AKUISISI DATA TEMPAT WISATA DI PROVINSI BALI MENGGUNAKAN OPENSTREETMAP
 
-## 1. IDENTITAS
-- Mata Kuliah: Akuisisi dan Manajemen Data
-- Kode Mata Kuliah: BIFP-243
-- Program Studi: Informatika
-- Institusi: Institut Bisnis dan Teknologi Indonesia (INSTIKI)
-- Semester/Kelas: 3 / F
-- Dosen Pengampu: Dr. I Gede Totok Suryawan, S.Kom., M.T.
-- Nama: Maria Indriani Lelu
-- NIM: 2501010335
+Nama: Maria Indriani Lelu
+NIM: 2501010335
+Mata Kuliah: Akuisisi dan Manajemen Data - BIFP-243
+Program Studi: Informatika - INSTIKI
+Semester / Kelas: 3 / F
+Dosen Pengampu: Dr. I Gede Totok Suryawan, http://S.Kom., M.T.
 
-## 2. DESKRIPSI PROYEK
-Proyek ini mengumpulkan data tempat wisata di Provinsi Bali menggunakan OpenStreetMap melalui Overpass API.
+## Tujuan
+Mengumpulkan data tempat wisata di Provinsi Bali sebagai bahan analisis pariwisata, dan sebagai dataset mentah untuk RTM Tugas 2. Data tempat wisata dipilih karena Bali memiliki sebaran atraksi yang luas di sembilan kabupaten/kota, dan datanya tersedia terbuka di OpenStreetMap.
 
-Data berhasil diperoleh sebanyak 713 tempat wisata pada tanggal 15 November 2026 dan disimpan dalam format CSV di data/raw/openstreetmap_bali_20261115.csv untuk memenuhi tugas praktik mata kuliah Akuisisi dan Manajemen Data.
+## 1. Sumber data
+- *Nama:* OpenStreetMap
+- *URL:* https://www.openstreetmap.org/
+- *Endpoint API:* https://overpass-api.de/api/interpreter
+- *Penerbit:* OpenStreetMap contributors
+- *Atribusi:* © OpenStreetMap contributors
 
-## 3. WILAYAH PENGUMPULAN DATA
-Wilayah yang menjadi cakupan pengumpulan data adalah sembilan kabupaten/kota di Provinsi Bali:
-1. Kabupaten Badung
-2. Kabupaten Gianyar
-3. Kabupaten Tabanan
-4. Kabupaten Bangli
-5. Kabupaten Klungkung
-6. Kabupaten Karangasem
-7. Kabupaten Buleleng
-8. Kabupaten Jembrana
-9. Kota Denpasar
+## 2. Tanggal dan jam akses
+2026-11-15 WITA (sama dengan waktu_akuisisi di docs/provenance.json)
 
-## 4. SUMBER DATA
-- Nama sumber: OpenStreetMap
-- Penyedia: OpenStreetMap contributors
-- API: Overpass API
-- Website: https://www.openstreetmap.org/
-- Dokumentasi: https://wiki.openstreetmap.org/wiki/Overpass_API
+## 3. Metode akuisisi
+- *Jenis:* API resmi, Overpass API tanpa API key
+- *Parameter:* query Overpass QL untuk objek dengan tag tourism di wilayah Provinsi Bali (area Bali), output JSON, timeout 180 detik
+- Kode memakai timeout, User-Agent dengan nama dan NIM pengambil, penanganan status code, dan jeda minimal 1 detik antar-request. Hanya memakai satu request utama agar tidak membebani server.
+- *Wilayah:* 9 kabupaten/kota di Provinsi Bali, yaitu Badung, Gianyar, Tabanan, Bangli, Klungkung, Karangasem, Buleleng, Jembrana, dan Kota Denpasar
+- *Hasil:* 713 tempat wisata
 
-## 5. METODE AKUISISI
-Pengumpulan data dilakukan menggunakan bahasa pemrograman Python melalui Google Colab dengan library Requests.
+## 4. Batasan etika
+- *Ketentuan:* ODbL, wajib atribusi © OpenStreetMap contributors; jangan mengirim query berulang
+- *Lisensi:* Open Database License (ODbL); atribusi dicantumkan di atas
+- *Data pribadi:* tidak diambil. Nama orang, nomor telepon, email, foto, dan akun media sosial perorangan tidak menjadi target pengumpulan, walaupun terlihat di sumber
+- *Keterbatasan:* data bergantung pada kelengkapan kontribusi OpenStreetMap; alamat yang kosong di sumber dibiarkan kosong dan tidak dibuat-buat; cakupan hanya objek yang memiliki tag tourism di Bali
 
-Permintaan data dilakukan melalui Overpass API dengan query objek tourism di wilayah Provinsi Bali. Data hasil akuisisi disimpan dalam format CSV dan dilengkapi dengan file provenance di docs/provenance.json sebagai bukti asal data.
+## 5. Penjelasan kolom (data/raw/openstreetmap_bali_20261115.csv)
+Kolom	Tipe	Arti	Satuan
+nama_wisata	teks	Nama tempat wisata	-
+kategori	teks	Kategori objek wisata dari tag tourism	-
+kabupaten_kota	teks	Kabupaten atau kota lokasi objek	-
+latitude	desimal	Garis lintang lokasi objek	derajat
+longitude	desimal	Garis bujur lokasi objek	derajat
+alamat	teks	Informasi alamat jika tersedia di sumber	-
+osm_id	bilangan bulat	Identitas objek di OpenStreetMap	-
+Jumlah record: 713 baris.
 
-## 6. KOLOM DATASET
-File: data/raw/openstreetmap_bali_20261115.csv
-
-Nama Kolom - Keterangan
-nama_wisata - Nama tempat wisata
-kategori - Kategori objek wisata
-kabupaten_kota - Kabupaten atau kota
-latitude - Garis lintang
-longitude - Garis bujur
-alamat - Informasi alamat jika tersedia
-osm_id - Identitas objek di OpenStreetMap
-
-Data yang tidak tersedia dari sumber dibiarkan kosong dan tidak dibuat-buat.
-
-## 7. ETIKA PENGUMPULAN DATA
-Pengumpulan data memperhatikan ketentuan penggunaan OpenStreetMap dan Overpass API, termasuk lisensi, batas permintaan, serta penggunaan data secara bertanggung jawab.
-
-Data pribadi seperti nomor telepon, alamat email, dan identitas individu tidak menjadi target pengumpulan.
-
-Atribusi OpenStreetMap dicantumkan sesuai ketentuan lisensi.
-
-## 8. STRUKTUR REPOSITORY
-rtm1_2501010335/
-- data/
-    - raw/
-        - openstreetmap_bali_20261115.csv
-- docs/
-    - provenance.json
-    - data_ethics_checklist.csv
-- README.md
-
-## 9. STATUS PENGERJAAN
-- [x] Membuat repository GitHub
-- [x] Menentukan topik dan sumber data
-- [x] Melakukan akuisisi data
-- [x] Menyimpan dataset mentah (713 data)
-- [x] Membuat provenance.json
-- [ ] Membuat data_ethics_checklist.csv
-- [ ] Melengkapi dokumentasi dan pengujian notebook
-
-## 10. LISENSI DAN ATRIBUSI
-OpenStreetMap menggunakan Open Database License (ODbL).
-
-(C) OpenStreetMap contributors
-
-Data tersedia di data/raw/openstreetmap_bali_20261115.csv dan bukti asal data di docs/provenance.json.
-
+## 6. Cara menjalankan ulang
+1. pip install pandas requests
+2. Buka notebooks/akuisisi_openstreetmap_bali.ipynb, pilih Restart & Run All.
+3. Berkas baru tersimpan di data/raw/ dengan tanggal hari itu; berkas lama tidak ditimpa.
