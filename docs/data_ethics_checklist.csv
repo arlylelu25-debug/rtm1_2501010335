@@ -1,0 +1,11 @@
+
+no,aspek_etika,pemeriksaan,status,bukti_catatan
+1,Sumber Data,Data berasal dari OpenStreetMap melalui Overpass API,Sesuai,https://www.openstreetmap.org/
+2,Lisensi Data,Memeriksa ketentuan lisensi Open Database License (ODbL),Sesuai,OpenStreetMap menggunakan lisensi ODbL
+3,Atribusi Sumber,Mencantumkan atribusi kepada kontributor OpenStreetMap,Sesuai,© OpenStreetMap contributors
+4,Privasi Data,Tidak menjadikan data pribadi sebagai target pengumpulan,Sesuai,Data yang dikumpulkan berupa informasi tempat wisata
+5,Tujuan Pengumpulan,Data digunakan untuk analisis pariwisata dan tugas akademik,Sesuai,Dataset tempat wisata Provinsi Bali
+6,Batasan Pengumpulan,Pengambilan data dibatasi pada objek bertag tourism di Bali,Sesuai,Query Overpass QL wilayah Provinsi Bali
+7,Keamanan Data,Memeriksa keamanan penyimpanan dan akses dataset,Perlu diperiksa,Periksa pengaturan repository dan penyimpanan data
+8,Transparansi,Menjelaskan metode dan sumber pengambilan data,Sesuai,Dokumentasi tersedia pada README.md dan notebook
+9,Kepatuhan API,Menghindari request berulang yang membebani server,Perlu diverifikasi,Periksa kode dan riwayat request Overpass API
